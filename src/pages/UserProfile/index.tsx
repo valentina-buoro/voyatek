@@ -1,4 +1,4 @@
-import Card from "@/components/UserProfile/card";
+import UserCard from "@/components/UserProfile/card";
 import React, { useEffect } from "react";
 import "../globals.css";
 
@@ -37,7 +37,7 @@ const LandingPage = () => {
 
         
     {users && users?.map((profile: any) => (
-      <Card key={profile.id} user={profile} />
+      <UserCard key={profile.id} user={profile} />
     ))}
     </div>
     </div>

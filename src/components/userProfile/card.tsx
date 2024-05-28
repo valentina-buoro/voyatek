@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ user }: any) => {
+const UserCard = ({ user }: any) => {
   return (
     <div className="">
       <div className="flex justify-between bg-yellow-100 p-3 rounded-md shadow-md ">
@@ -34,4 +34,4 @@ const Card = ({ user }: any) => {
   );
 };
 
-export default Card;
+export default UserCard;
