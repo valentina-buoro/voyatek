@@ -7,6 +7,7 @@ const UserProfile = () => {
   const [users, setUsers] = React.useState([]);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
+
   useEffect(() => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -17,8 +18,8 @@ const UserProfile = () => {
     setUsers([]);
   try{
     const response: any = await axios.get("https://randomuser.me//api?results=10");
-    setUsers(response.data.results);
-    if (response.data) {
+    setUsers(response?.data.results);
+    if (response?.data) {
       setLoading(false);
     }
   }catch(e){
