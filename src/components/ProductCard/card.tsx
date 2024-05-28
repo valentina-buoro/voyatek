@@ -18,7 +18,7 @@ const Card = ({product}: any) => {
        
       </div>
       <div className="text-normal text-sm text-gray-500 pt-2 md:pt-4 " onClick={()=>{}}>
-        <Link href={`/ProductCard/ProductDetails/${product.id}`} className='text-gray-500'>Product Details</Link>
+        <Link href={`/ProductCard/ProductDetails/${product.id}`} className='text-gray-500 text-lg hover:border-b-2 hover:border-b-gray-500'>Product Details</Link>
       </div>
      </div>
       
