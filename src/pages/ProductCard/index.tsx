@@ -24,8 +24,7 @@ const LandingPage = () => {
       if (response.data) {
         setLoading(false);
       }
-      console.log(products);
-      console.log(response.data);
+      
     } catch (error) {
       setError(true);
       setLoading(false);
