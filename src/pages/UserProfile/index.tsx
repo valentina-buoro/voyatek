@@ -1,7 +1,6 @@
 import UserCard from "@/components/UserProfile/card";
 import React, { useEffect } from "react";
 import "../globals.css";
-
 import axios from "axios";
 
 const LandingPage = () => {
