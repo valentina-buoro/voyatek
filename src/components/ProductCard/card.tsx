@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Card = ({product}: any) => {
   return (
-    <div className=''>
+    <div className='cursor-pointer'>
       <div className="flex flex-col justify-between bg-white h-[300px] md:h-[350px] p-3 rounded-md shadow-md ">
       <div className=" h-[150px] self-center">
         <Image width={100} height={100} className="" src ={product.image} alt="pic" />
@@ -18,7 +18,7 @@ const Card = ({product}: any) => {
        
       </div>
       <div className="text-normal text-sm text-gray-500 pt-2 md:pt-4 " onClick={()=>{}}>
-        <Link href='/' className='text-gray-500'>Product Details</Link>
+        <Link href={`/ProductCard/ProductDetails/${product.id}`} className='text-gray-500'>Product Details</Link>
       </div>
      </div>
       
