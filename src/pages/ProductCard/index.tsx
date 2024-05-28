@@ -1,12 +1,10 @@
 import Card from "@/components/ProductCard/card";
 import React, { useEffect } from "react";
 import "../globals.css";
-import useRequest from "@/hooks/useRequest";
 import axios from "axios";
 
 const LandingPage = () => {
   const [products, setProducts] = React.useState([]);
-  const { makeRequest } = useRequest("products", "GET");
 
   useEffect(() => {
     fetchData();

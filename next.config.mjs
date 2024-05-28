@@ -2,7 +2,7 @@
 const nextConfig = {
    
     images: {
-        domains: ['fakestoreapi.com'],
+        domains: ['fakestoreapi.com', 'randomuser.me'],
     },
 };
 
