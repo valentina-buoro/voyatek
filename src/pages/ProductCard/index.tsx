@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "../globals.css";
 import axios from "axios";
 
-const LandingPage = () => {
+const ProductCard = () => {
   const [products, setProducts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(false);
@@ -48,4 +48,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default ProductCard;

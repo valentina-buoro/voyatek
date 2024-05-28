@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "../globals.css";
 import axios from "axios";
 
-const LandingPage = () => {
+const UserProfile = () => {
   const [users, setUsers] = React.useState([]);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
@@ -43,4 +43,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default UserProfile;
