@@ -4,7 +4,7 @@ import Image from "next/image";
 const UserCard = ({ user }: any) => {
   return (
     <div className="">
-      <div className="flex justify-between bg-yellow-100 p-3 rounded-md shadow-md ">
+      <div className="flex justify-between bg-yellow-100 p-3 rounded-md shadow-md text-black">
         <div className=" h-[150px] self-center">
           <Image
             width={100}

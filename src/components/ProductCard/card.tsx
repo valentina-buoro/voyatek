@@ -1,31 +1,58 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-const Card = ({product}: any) => {
+type Props = {
+  product: {
+    image: string;
+    id: string;
+    title: string;
+    price: string;
+  };
+};
+
+const Card = ({ product }: Props) => {
   return (
-    <div className='cursor-pointer'>
-      <div className="flex flex-col justify-between bg-white h-[300px] md:h-[350px] p-3 rounded-md shadow-md ">
-      <div className=" h-[150px] self-center">
-        <Image width={100} height={100} className="" src ={product.image} alt="pic" />
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="flex w-full justify-center bg-white rounded-t-lg">
+        <img
+          className="rounded-t-lg w-fit max-h-52 h-full"
+          src={product.image}
+          alt=""
+        />
       </div>
-     <div className="py-2 md:py-4">
-     <div className="flex flex-col md:flex-row md:justify-between">
-      <div className=" ">
-        <p className="font-semibold align-middle text-base pb-1 md:pb-2">{product.title}</p>
-      <p className="font-semibold align-middle text-lg pb-1 md:pb-2">$ {product.price}</p>
-      </div>
-       
-      </div>
-      <div className="text-normal text-sm text-gray-500 pt-2 md:pt-4 " onClick={()=>{}}>
-        <Link href={`/ProductCard/ProductDetails/${product.id}`} className='text-gray-500 text-lg hover:border-b-2 hover:border-b-gray-500'>Product Details</Link>
-      </div>
-     </div>
-      
 
-    </div>
-    </div>
-  )
-}
+      <div className="p-5 flex flex-col  h-[200px] justify-between ">
+        <div className="">
+          <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+            {product.title}
+          </h5>
 
-export default Card
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            $ {product.price}
+          </p>
+        </div>
+        <div className="flex w-full items-center justify-between gap-x-2">
+          <Link
+            href={`/product-card/product-details/${product.id}`}
+            className="w-full"
+          >
+            <button className=" px-3 py-2 w-full text-sm font-medium text-center text-white bg-blue-700 rounded-sm hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+              Buy
+            </button>
+          </Link>
+          <Link
+            href={`/product-card/product-details/${product.id}`}
+            className="w-full"
+          >
+            <button className=" w-full px-3 py-2 text-sm font-medium text-blue-700  bg-white rounded-sm hover:bg-blue-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+              View Product
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
